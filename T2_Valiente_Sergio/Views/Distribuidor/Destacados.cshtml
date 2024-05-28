@@ -1,0 +1,81 @@
+﻿@{
+    ViewData["Title"] = "Destacados";
+}
+<h1 class="text-center fantasy-font">DISTRIBUIDORES QUE DESTACAN</h1>
+
+<div class="container">
+
+    
+    <p class="lead text-center">EN EL MUNDO</p>
+
+    <div class="row mb-3">
+        <div class="col-md-6 order-md-2">
+            <img src="~/pictures/amazon.jpeg" class="img-fluid rounded" alt="Amazon">
+        </div>
+        <div class="col-md-6 d-flex flex-column justify-content-center order-md-1">
+            <h4 class="styled-subtitle">Amazon</h4>
+            <p>El gigante del comercio electrónico que ofrece una amplia gama de productos y servicios en todo el mundo, desde libros y electrónicos hasta productos para el hogar y la moda.</p>
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-md-6">
+            <img src="~/pictures/walmart.jpg" class="img-fluid rounded" alt="Walmart">
+        </div>
+        <div class="col-md-6 d-flex flex-column justify-content-center">
+            <h4 class="styled-subtitle">Walmart</h4>
+            <p>Una de las mayores cadenas minoristas del mundo, con tiendas en varios países y una amplia selección de productos, desde comestibles hasta productos electrónicos y muebles.</p>
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-md-6 order-md-2">
+            <img src="~/pictures/alibaba.jpg" class="img-fluid rounded" alt="Alibaba">
+        </div>
+        <div class="col-md-6 d-flex flex-column justify-content-center order-md-1">
+            <h4 class="styled-subtitle">Alibaba</h4>
+            <p>Una empresa de comercio electrónico con sede en China que ofrece una plataforma para empresas y consumidores para comprar y vender una variedad de productos, desde electrónicos hasta ropa y artículos para el hogar.</p>
+        </div>
+    </div>
+</div>
+
+<style>
+    .container {
+        max-width: 800px;
+        margin-top: 20px;
+    }
+
+    .row {
+        align-items: center;
+    }
+
+    .img-fluid {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .styled-subtitle {
+        font-size: 1.8em; 
+        font-weight: bold;
+        color: #333; 
+        margin-bottom: 10px;
+    }
+
+    .fantasy-font {
+    font-family: fantasy;
+    font-size: 2em;
+    }
+    
+    .p {
+        font-size: 2em;
+        margin-bottom: 0;
+    }
+
+    .lead {
+        margin-bottom: 40px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #18DA79;
+    }
+</style>

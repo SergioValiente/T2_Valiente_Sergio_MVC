@@ -1,0 +1,118 @@
+﻿@model IEnumerable<T2_Valiente_Sergio.Models.Distribuidor>
+
+@{
+    ViewData["Title"] = "Distribuidores";
+}
+
+<h1 class="text-center mt-5 mb-4">Distribuidores</h1>
+
+<div class="container pt-3">
+    <div class="row mb-3">
+        <div class="col">
+            <h2 class="text-justify mt-5 mb-4">Lista de distribuidores</h2>
+        </div>
+        <div class="col text-end">
+        <a asp-controller="Distribuidor" asp-action="Agregar" class="btn btnAgregar">Nuevo distribuidor</a>
+         </div>
+    </div>
+
+    <br>
+
+    @if(Model.Count()>0)
+    {
+        <table class="table table-bordered table-striped table-responsive" style="width:100%">
+            <thead class="bg-primary text-light text-center">
+                <th scope="col">Nombre de distribuidor</th>
+                <th scope="col">Razon Social</th>
+                <th scope="col">Telefono</th>
+                <th scope="col">Año de Incio</th>
+                <th scope="col">Contacto de distribuidor</th>
+            </thead>
+
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <th width="20%">@item.NombreDistribuidor</th>
+                        <th width="40%">@item.RazonSocial</th>
+                        <th width="10%">@item.Telefono</th>
+                        <th width="10%">@item.AnioInicioOperacion</th>
+                        <th width="20%">@item.Contacto</th>
+                        <th>
+                            <div class="w-75 btn-group" role="group">
+                                <a asp-controller="Distribuidor" asp-action="Editar" asp-route-Id="@item.Id" class="btn btnEditar mx-2">Editar</a>
+                                <a asp-controller="Distribuidor" asp-action="Eliminar" asp-route-Id="@item.Id" class="btn btnEliminar mx-2">Eliminar</a>
+                            </div>
+                        </th>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else{<p class="text-center">No se encontraron registros.</p>}
+</div>
+
+
+<style>
+    .table {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 1rem;
+        border-radius: 20px;
+    }
+
+        .table thead th {
+            background-color: #343a40;
+            color: white;
+        }
+
+        .table tbody tr:hover {
+            background-color: #f8f9fa;
+        }
+
+    .text-center {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .btnAgregar {
+        background-color: #28a745;
+        color: white;
+        border-radius: 12px;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+        .btnAgregar:hover {
+            background-color: #218838;
+        }
+
+    .btnEditar {
+        background-color: #ffc107;
+        color: black;
+        border-radius: 12px;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+        .btnEditar:hover {
+            background-color: #e0a800;
+        }
+
+    .btnEliminar {
+        background-color: #dc3545;
+        color: white;
+        border-radius: 12px;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+        .btnEliminar:hover {
+            background-color: #c82333;
+        }
+</style>

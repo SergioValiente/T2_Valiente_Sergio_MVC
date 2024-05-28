@@ -1,0 +1,90 @@
+﻿@model T2_Valiente_Sergio.Models.Distribuidor;
+@{
+    ViewData["Title"] = "Eliminar";
+}
+
+<h4>Información de distribuidor</h4>
+
+<form method="post" asp-action="Eliminar">
+    <input asp-for="Id" hidden />
+    <div class="border p-3">
+
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group row">
+            <h2 class="text-intro pl-3">¿Eliminar distribuidor permanentemente?</h2>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col md-6">
+                    <label asp-for="NombreDistribuidor" class="form-label">Nombre del distribuidor</label>
+                    <input asp-for="NombreDistribuidor" disabled class="form-control" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col md-6">
+                    <label asp-for="RazonSocial" class="form-label">Razon Social</label>
+                    <input asp-for="RazonSocial" disabled class="form-control" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col md-6">
+                    <label asp-for="Telefono" class="form-label">Telefono</label>
+                    <input asp-for="Telefono" disabled class="form-control" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col md-6">
+                    <label asp-for="AnioInicioOperacion" class="form-label">Año de inicio</label>
+                    <input asp-for="AnioInicioOperacion" disabled class="form-control" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col md-6">
+                    <label asp-for="Contacto" class="form-label">Contacto</label>
+                    <input asp-for="Contacto" class="form-control" />
+                </div>
+            </div>
+
+            <div class="d-grid gap-2 d-md-block mt-3">
+
+                <button type="submit" class="btn btnEliminar">Eliminar</button>
+                <a asp-controller="Distribuidor" asp-action="Index" class="btn btn-sucess">Regresar</a>
+            </div>
+        </div>
+    </div>
+</form>
+
+@section Scripts {
+    @{
+        <partial name="_ValidationScriptsPartial" ; />
+    }
+}
+
+<style>
+    .form-label {
+        font-weight: bold;
+    }
+
+    .form-control {
+        border-radius: 20px;
+    }
+
+    .btnEliminar {
+        background-color: #dc3545;
+        color: white;
+        border-radius: 12px;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+        .btnEliminar:hover {
+            background-color: #c82333;
+        }
+</style>

@@ -1,0 +1,82 @@
+﻿
+@{
+    ViewData["Title"] = "Destacados_PE";
+}
+
+<h1 class="text-center fantasy-font">DISTRIBUIDORES QUE DESTACAN</h1>
+
+<div class="container">
+    <p class="lead text-center">EN EL PERÚ</p>
+
+    <div class="row mb-3">
+        <div class="col-md-6">
+            <img src="~/pictures/ripley.jpeg" class="img-fluid rounded" alt="Ripley">
+        </div>
+        <div class="col-md-6 d-flex flex-column justify-content-center">
+            <h4 class="styled-subtitle">Ripley</h4>
+            <p>Una de las cadenas de tiendas por departamento más grandes del país, con una amplia variedad de productos que incluyen ropa, electrónica, muebles y más.</p>
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-md-6 order-md-2">
+            <img src="~/pictures/saga_falabella.jpg" class="img-fluid rounded" alt="Saga Falabella">
+        </div>
+        <div class="col-md-6 d-flex flex-column justify-content-center order-md-1">
+            <h4 class="styled-subtitle">Saga Falabella</h4>
+            <p>Otra cadena importante de tiendas por departamento en el Perú, ofreciendo una variedad de productos que van desde moda hasta electrodomésticos y artículos para el hogar.</p>
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-md-6">
+            <img src="~/pictures/oechsle.jpg" class="img-fluid rounded" alt="Oechsle">
+        </div>
+        <div class="col-md-6 d-flex flex-column justify-content-center">
+            <h4 class="styled-subtitle">Oechsle</h4>
+            <p>Una cadena minorista que ofrece una variedad de productos, desde ropa hasta electrónicos y artículos para el hogar.</p>
+        </div>
+    </div>
+</div>
+
+
+<style>
+    .container {
+        max-width: 800px;
+        margin-top: 20px;
+    }
+
+    .row {
+        align-items: center;
+    }
+
+    .img-fluid {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .styled-subtitle {
+        font-size: 1.8em;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    .fantasy-font {
+        font-family: fantasy;
+        font-size: 2em;
+    }
+
+    .p {
+        font-size: 2em;
+        margin-bottom: 0;
+    }
+
+    .lead {
+        margin-bottom: 40px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #18DA79;
+    }
+</style>
